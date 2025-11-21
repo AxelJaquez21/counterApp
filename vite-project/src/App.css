@@ -1,0 +1,79 @@
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  font-family: Arial, sans-serif;
+  
+}
+
+h1 {
+  font-size: 3em;
+  right: 25px;
+  position: relative;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#increaseBtn {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#increaseBtn:hover {
+  background-color: #00cc00;
+}
+
+#decreaseBtn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+#decreaseBtn:hover {
+  background-color: #f40808;
+}
+
+/* Wrap button + emoji */
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+/* Thumbs Up animation & positioning */
+#thumpsupimg,
+#thumpsdownimg {
+  width: 40px;
+  position: absolute;
+  top: -45px; /* ABOVE the button */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatUp 1s ease-out;
+  pointer-events: none;
+}
+
+/* Float-up animation */
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -30px);
+  }
+}
+
